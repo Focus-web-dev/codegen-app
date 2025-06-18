@@ -1,0 +1,103 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(30, 41, 59, 0.18);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 0.2s;
+  backdrop-filter: blur(6px);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.modal {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.13);
+  max-width: 420px;
+  width: 100%;
+  padding: 32px 32px 24px 32px;
+  position: relative;
+  animation: scaleIn 0.22s cubic-bezier(0.4, 1.6, 0.6, 1);
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.closeBtn {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  font-size: 22px;
+  color: #b0b6be;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color 0.15s;
+  z-index: 1;
+}
+.closeBtn:hover {
+  color: #222;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 2px;
+  color: #222;
+}
+.email {
+  color: #2563eb;
+  font-size: 15px;
+  margin-bottom: 18px;
+  display: block;
+}
+.section {
+  margin-bottom: 18px;
+}
+.sectionTitle {
+  font-weight: 600;
+  margin-bottom: 4px;
+  color: #222;
+}
+.mapLink {
+  color: #e53e3e;
+  font-size: 15px;
+  text-decoration: none;
+  margin-left: 2px;
+  transition: color 0.15s;
+}
+.mapLink:hover {
+  color: #c53030;
+}
+.label {
+  font-weight: 600;
+  color: #7b8794;
+  margin-right: 4px;
+}
+.value {
+  color: #222;
+}
+@media (max-width: 500px) {
+  .modal {
+    padding: 18px 6px 12px 6px;
+    max-width: 98vw;
+  }
+}

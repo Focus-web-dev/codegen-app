@@ -1,0 +1,83 @@
+.container {
+  width: 100%;
+  margin: 0;
+  background: #fff;
+  border-radius: 0;
+  box-shadow: none;
+  overflow: hidden;
+}
+.header,
+.row {
+  display: grid;
+  grid-template-columns: 2fr 2fr 1.5fr 2fr 2fr 0.5fr;
+  align-items: center;
+  gap: 16px;
+  padding: 0 24px;
+}
+.header {
+  background: #f6f8fa;
+  font-weight: 600;
+  color: #a0aec0;
+  font-size: 15px;
+  height: 56px;
+  border-bottom: 1px solid #e5e7eb;
+}
+.row {
+  border-bottom: 1px solid #f1f1f1;
+  min-height: 64px;
+  cursor: pointer;
+  transition: background 0.15s;
+  background: #fff;
+}
+.row:last-child {
+  border-bottom: none;
+}
+.row:hover {
+  background: #f5f7fa;
+}
+.cell {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 16px;
+}
+.name {
+  font-weight: 700;
+  color: #222;
+}
+.email {
+  color: #a0aec0;
+  font-size: 14px;
+}
+a {
+  color: #2563eb;
+  text-decoration: none;
+  transition: color 0.15s;
+}
+a:hover {
+  color: #1d4ed8;
+  text-decoration: underline;
+}
+.deleteBtn {
+  color: #e53e3e;
+  font-size: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color 0.15s;
+}
+.deleteBtn:hover {
+  color: #c53030;
+}
+@media (max-width: 700px) {
+  .header,
+  .row {
+    grid-template-columns: 1.5fr 2fr 1.5fr 1.5fr 1.5fr 0.5fr;
+    font-size: 14px;
+    padding: 0 8px;
+  }
+  .container {
+    border-radius: 0;
+    box-shadow: none;
+  }
+}
